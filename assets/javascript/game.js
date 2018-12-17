@@ -1,4 +1,24 @@
+//Before all else, declare the variables!
+
+//declare my 4 crystals (which will I will later make display as images and make clicking on them add points to the user's score) and give them all a value of 0 to start.
+var crystal1 = 0;
+var crystal2 = 0;
+var crystal3 = 0;
+var crystal4 = 0;
+
+//declare the targetScore variable that will be displayed to the page and the user will try to match
+var targetScore = 0;
+//declare the $targetScore variable (string) that will display the targetScore as text on the screen
+var $targetScoreDisplay = "";
+
+//declare the userScore variable that will be displayed on the page and will always start at 0 to begin every round, and it goes up every time the user clicks on an image, UNTIL the userScore >= (is greater than or equal to) targetScore
+var userScore = 0;
+//declare the $userScore variable that will be displayed on the page as a string and it will show the user's score so far on the page
+var $userScoreDisplay = "";
+
+
 // first, the computer will have to randomly choose a target score number for the round
+
 
 // then, somewhat random point values must be assigned to each of the 4 crystal images/buttons
 
@@ -17,7 +37,7 @@
 
 
 
-// make it so that something cool happens when the user acquires their fifth win!
+// BONUS: make it so that something cool happens when the user acquires their fifth win!
 
 
 
