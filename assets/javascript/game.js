@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //IGNORE MY PSEUDOCODE!!!!!!! IT IS OUTDATED!!!!
   //Before all else, declare the variables!
 
   //declare my 4 crystals (which will I will later make display as images and make clicking on them add points to the user's score) and give them all a value of 0 to start.

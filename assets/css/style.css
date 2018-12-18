@@ -2,6 +2,10 @@ h5 {
   color: palevioletred;
 }
 
+#howTo {
+  background-color: rgb(128, 92, 170);
+}
+
 #CrystalHeader {
   color: darkslateblue;
 }
@@ -9,4 +13,24 @@ h5 {
 .crystalimg {
   max-height: 200px;
   max-width: 200px;
+}
+
+#scoreDisplay {
+  color: darkmagenta;
+  font-weight: bold;
+}
+
+#target-score {
+  color: darkmagenta;
+  font-weight: bold;
+}
+
+#userWins {
+  color: darkmagenta;
+  font-weight: bold;
+}
+
+#userLosses {
+  color: darkmagenta;
+  font-weight: bold;
 }
