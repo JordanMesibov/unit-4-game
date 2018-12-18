@@ -36,9 +36,6 @@ function assignCrystalPoints() {
 }
 
 
-
-
-
 $(document).ready(function () {
 
 generateTargetScore();
@@ -49,36 +46,39 @@ $(".crystalimg").on("click", function () {
   console.log("hi");
   var crystalWorth = $(this).attr("data-value");
   console.log(crystalWorth);
+  if (userScore === targetScore) {
+    alert("You won the round. I'm so proud of you.");
+    wins++;
+    $("#userWins").html(wins);
+    generateTargetScore();
+    newUserScore();
+    console.log(`Target Score: ${targetScore}`);
+    console.log(`UserScore: ${userScore}`);
+  }
+
+  if (userScore > targetScore) {
+    alert("You lost the round. I'm very disappointed in you.");
+    losses++;
+    $("#userLosses").html(losses);
+    generateTargetScore();
+    newUserScore();
+    console.log(`Target Score: ${targetScore}`);
+    console.log(`UserScore: ${userScore}`);
+  }
 })
 
 
 // JS CODE FOR USER WINNING THE ROUND: ---------------------
 
 // make it so that if the user's round score is exactly equal to the target round score, they get alerted that they won the round!
-if (userScore === targetScore) {
-  alert("You won the round. I'm so proud of you.");
-  wins++;
-  $("#userWins").html(wins);
-  generateTargetScore();
-  newUserScore();
-  console.log(`Target Score: ${targetScore}`);
-  console.log(`UserScore: ${userScore}`);
-}
+
 
 // make it so that after the user gets alerted that they won a round, their win counter goes up by 1 and it gets displayed in the appropriate div.
 
 // make it so that once the user gets their win alert and the win counter goes up by 1, and a new round starts. A new round starts when the user's round score is reset to 0, a new round target score is generated and displayed to the appropriate div, and new point values are assigned to the 4 crystal images/buttons.
 
 // JS CODE FOR USER LOSING THE ROUND: ----------------------------
-if(userScore > targetScore) {
-  alert("You lost the round. I'm very disappointed in you.");
-  losses++;
-  $("#userLosses").html(losses);
-  generateTargetScore();
-  newUserScore();
-  console.log(`Target Score: ${targetScore}`);
-  console.log(`UserScore: ${userScore}`);
-}
+
 // make it so that if the user's round score is greater than the target round score, the user gets alerted that they lost the round!
 
 //make it so that after the user gets alerted that they lost a round, their loss counter goes up by 1 and it gets displayed in the appropriate div.
