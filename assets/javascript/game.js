@@ -10,7 +10,7 @@ var losses = 0;
 function generateTargetScore() {
   var targetScore = Math.floor(Math.random() * 100) + 20;
 // display the targetScore to the screen in the appropriate div
-$("#target-score").html(targetScore);
+$("#target-score").html("Target Score: " + targetScore);
 console.log(targetScore);
 }
 
@@ -19,7 +19,7 @@ console.log(targetScore);
 function newUserScore() {
 var userScore = 0;
 //display the userScore to the screen in the appropriate div
-$("#scoreDisplay").html(userScore);
+$("#scoreDisplay").html("User Score: " + userScore);
 }
 
 
@@ -43,13 +43,12 @@ newUserScore();
 assignCrystalPoints();
 
 $(".crystalimg").on("click", function () {
-  console.log("hi");
   var crystalWorth = $(this).attr("data-value");
   console.log(crystalWorth);
   if (userScore === targetScore) {
     alert("You won the round. I'm so proud of you.");
     wins++;
-    $("#userWins").html(wins);
+    $("#userWins").html("Wins: " + wins);
     generateTargetScore();
     newUserScore();
     console.log(`Target Score: ${targetScore}`);
@@ -59,7 +58,7 @@ $(".crystalimg").on("click", function () {
   if (userScore > targetScore) {
     alert("You lost the round. I'm very disappointed in you.");
     losses++;
-    $("#userLosses").html(losses);
+    $("#userLosses").html("Losses: " + losses);
     generateTargetScore();
     newUserScore();
     console.log(`Target Score: ${targetScore}`);
