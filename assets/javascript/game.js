@@ -7,14 +7,15 @@ var crystal3 = 0;
 var crystal4 = 0;
 
 //declare the targetScore variable that will be displayed to the page and the user will try to match
-var targetScore = 0;
-//declare the $targetScore variable (string) that will display the targetScore as text on the screen
-var $targetScoreDisplay = "";
+var targetScore = Math.floor(Math.random() * 100) + 20;
+// display the targetScore to the screen in the appropriate div
+$("#target-score").html(targetScore);
+
 
 //declare the userScore variable that will be displayed on the page and will always start at 0 to begin every round, and it goes up every time the user clicks on an image, UNTIL the userScore >= (is greater than or equal to) targetScore
 var userScore = 0;
-//declare the $userScore variable that will be displayed on the page as a string and it will show the user's score so far on the page
-var $userScoreDisplay = "";
+//display the userScore to the screen in the appropriate div
+$("#scoreDisplay").html(userScore);
 
 
 // first, the computer will have to randomly choose a target score number for the round
