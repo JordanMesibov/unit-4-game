@@ -5,3 +5,8 @@ h5 {
 #CrystalHeader {
   color: darkslateblue;
 }
+
+.crystalimg {
+  max-height: 200px;
+  max-width: 200px;
+}
